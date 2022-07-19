@@ -18,13 +18,14 @@ describe('Medusa', function() {
   it('should have a name', function() {
     // instantiate a Medusa object with your name as an argument
     // instantiate another Medusa object with someone else's name as an argument
-    var megara = new Medusa('Megara');
-    var maya = new Medusa('Maya');
+    var dana = new Medusa("Dana");
+    var alia = new Medusa("Alia");
+
+    assert.equal(dana.name, "Dana");
+    assert.equal(alia.name, "Alia");
 
     // assert that the first medusa's name is your name
     // assert that the second medusa's name is the other name
-    assert.equal(megara.name, 'Megara');
-    assert.equal(maya.name, 'Maya');
 
     //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });

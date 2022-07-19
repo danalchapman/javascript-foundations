@@ -2,8 +2,8 @@ var Person = require('./person');
 var Statue = require('./statue');
 
 class Medusa {
-  constructor(name) {
-    this.name = name;
+  constructor(medusaName) {
+    this.name = medusaName;
     this.statues = [];
   }
   gazeAtVictim(victim) {
@@ -18,6 +18,5 @@ class Medusa {
     }
   }
 }
-
 
 module.exports = Medusa;
