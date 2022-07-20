@@ -3,33 +3,36 @@ var Centaur = require('../exercises/centaur');
 
 describe('Centaur', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Centaur);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     // instantiate a Centaur object with an object as an argument. The object should have a key of name and value of your name
     // instantiate another Centaur object with a different name
-
+    var dana = new Centaur({ name: "Dana" });
+    var alia = new Centaur({ name: "Alia" });
     // assert that the first centaur's name is your name
     // assert that the second centaur's name is the other name
+    assert.equal(dana.name, "Dana");
+    assert.equal(alia.name, "Alia");
 
     //NOTE: We will not ask you to write your own tests in a mod 1 assessment, but it is good practice to prepare for mod 2!
   });
 
-  it.skip('should have a breed', function() {
+  it('should have a breed', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.breed, 'Palomino');
   });
 
-  it.skip('should have excellent bow skills', function() {
+  it('should have excellent bow skills', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.shootBow(), 'Twang!!!');
   });
 
-  it.skip('should have a horse sound when it runs', function() {
+  it('should have a horse sound when it runs', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     var soundEffect = centaur.run();
@@ -37,13 +40,13 @@ describe('Centaur', function() {
     assert.equal(soundEffect, 'Clop clop clop clop!!!');
   });
 
-  it.skip('should not be cranky when first created', function() {
+  it('should not be cranky when first created', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.cranky, false);
   });
 
-  it.skip('should be standing up when first created', function() {
+  it('should be standing up when first created', function() {
     var centaur = new Centaur({ name: 'Georgiana', type: 'Palomino' });
 
     assert.equal(centaur.standing, true);
