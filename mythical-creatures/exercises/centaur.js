@@ -10,8 +10,12 @@ class Centaur {
     this.crankyCounter += 1;
     if (this.crankyCounter === 3) {
       this.cranky = true;
+      // lines 14-18 do not break code but does not progress 
+    } if (this.cranky === true) {
+      return "NO!";
+    } else {
+      return "Twang!!!"
     }
-    return "Twang!!!"
   }
   run() {
     this.crankyCounter += 1;
