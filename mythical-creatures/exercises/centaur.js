@@ -4,11 +4,17 @@ class Centaur {
     this.breed = centaurInfo.type;
     this.cranky = false;
     this.standing = true;
+    this.crankyCounter = 0;
   }
   shootBow() {
+    this.crankyCounter += 1;
+    if (this.crankyCounter === 3) {
+      this.cranky = true;
+    }
     return "Twang!!!"
   }
   run() {
+    this.crankyCounter += 1;
     return "Clop clop clop clop!!!"
   }
 }
