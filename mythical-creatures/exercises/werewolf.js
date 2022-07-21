@@ -18,7 +18,6 @@ class Werewolf {
     }
   }
   eatVictim(victim) {
-    // can eat a victim if hungry
     var newVictim = new Victim(victim.name);
     if (this.hungry === true) {
       victim.alive = false;
