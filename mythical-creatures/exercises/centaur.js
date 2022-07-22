@@ -6,19 +6,24 @@ class Centaur {
     this.standing = true;
     this.crankyCounter = 0;
   }
-  shootBow() {
+  checkCranky() {
     this.crankyCounter += 1;
     if (this.crankyCounter === 3) {
       this.cranky = true;
-      // lines 14-18 do not break code but does not progress 
-    } if (this.cranky === true) {
-      return "NO!";
-    } else {
-      return "Twang!!!"
     }
   }
+  shootBow() {
+    this.checkCranky()
+    if (this.cranky === true) {
+      return "NO!";
+    }
+    return "Twang!!!"
+  }
   run() {
-    this.crankyCounter += 1;
+    this.checkCranky()
+    if (this.cranky === true) {
+      return "NO!";
+    }
     return "Clop clop clop clop!!!"
   }
 }
