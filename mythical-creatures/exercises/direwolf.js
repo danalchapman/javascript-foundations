@@ -6,7 +6,14 @@ class Direwolf {
     this.starksToProtect = [];
   }
   protect(stark) {
-    this.starksToProtect.push(stark);
+    if (this.starksToProtect.length > 1) {
+      return
+    }
+
+    if (this.home === stark.location) {
+      stark.safe = true;
+      this.starksToProtect.push(stark);
+    }
   }
 }
 
