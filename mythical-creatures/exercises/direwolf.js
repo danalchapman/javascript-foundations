@@ -4,6 +4,7 @@ class Direwolf {
     this.home = wolfHome || "Beyond the Wall";
     this.size = wolfSize || "Massive";
     this.starksToProtect = [];
+    this.huntsWhiteWalkers = true;
   }
   protect(stark) {
     if (this.starksToProtect.length > 1) {
@@ -13,7 +14,11 @@ class Direwolf {
     if (this.home === stark.location) {
       stark.safe = true;
       this.starksToProtect.push(stark);
+      this.huntsWhiteWalkers = false;
     }
+  }
+  leave() {
+    
   }
 }
 
