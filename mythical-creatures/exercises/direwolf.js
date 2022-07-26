@@ -18,7 +18,9 @@ class Direwolf {
     }
   }
   leave() {
-    
+    // remove stark from protect array
+    // stark.safe = false;
+    // this.huntsWhiteWalkers = true;
   }
 }
 
