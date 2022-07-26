@@ -17,10 +17,13 @@ class Direwolf {
       this.huntsWhiteWalkers = false;
     }
   }
-  leave() {
-    // remove stark from protect array
-    // stark.safe = false;
-    // this.huntsWhiteWalkers = true;
+  leave(stark) {
+    for (var i = 0; i < this.starksToProtect.length; i++) {
+      if (this.starksToProtect[i].name === stark.name) {
+        stark.safe = false;
+        this.starksToProtect.splice(i, 1);
+      }
+    }
   }
 }
 
