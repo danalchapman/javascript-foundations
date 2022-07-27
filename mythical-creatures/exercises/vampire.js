@@ -1,7 +1,7 @@
 class Vampire {
-  constructor(name, pet) {
-    this.name = name;
-    this.pet = pet || "bat";
+  constructor(vampName, vampPet) {
+    this.name = vampName;
+    this.pet = vampPet || "bat";
     this.thirsty = true;
     this.ouncesDrank = 0;
   }
