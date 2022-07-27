@@ -5,9 +5,8 @@ class Magician {
     this.favoriteAccessory = magiDetails.clothing || "top hat";
     this.confidencePercentage = 10;
   }
-  performIncantation(incantation) {
-    // if passed an argument should be able to uppercase that argument
-    return `${incantation.toUpperCase()}!` //method to uppercase a string
+  performIncantation(spell) {
+    return `${spell.toUpperCase()}!`
   }
   performTrick() {
     this.confidencePercentage += 10;
