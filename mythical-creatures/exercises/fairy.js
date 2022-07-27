@@ -12,6 +12,7 @@ class Fairy {
   }
   // makeDresses(flowers) {
   //   this.clothes.dresses.push(flowers);
+  //   return this.clothes.dresses.join("-");
   // }
 }
 
