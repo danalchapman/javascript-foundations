@@ -1,8 +1,8 @@
-var Victim = require('./victim');
+var Victim = require("./victim");
 
 class Werewolf {
-  constructor(werewolfName) {
-    this.name = werewolfName;
+  constructor(wereName) {
+    this.name = wereName;
     this.form = "human";
     this.hungry = false;
   }
@@ -14,17 +14,16 @@ class Werewolf {
     } else if (this.form === "wolf") {
       this.form = "human";
       this.hungry = false;
-      return "Where are I?"
+      return "Where are I?";
     }
   }
   eatVictim(victim) {
-    var newVictim = new Victim(victim.name);
-    if (this.hungry === true) {
+    if (this.form === "human") {
+      return `No way am I eating ${victim.name}, I'd like a burger!`;
+    } else {
       victim.alive = false;
       this.form = "human";
-      return `Yum, ${victim.name} was delicious.`
-    } else if (this.form === "human") {
-      return `No way am I eating ${victim.name}, I'd like a burger!`
+      return `Yum, ${victim.name} was delicious.`;
     }
   }
 }

@@ -1,6 +1,6 @@
 class Victim {
-  constructor(victimName) {
-    this.name = victimName;
+  constructor(vicName) {
+    this.name = vicName;
     this.alive = true;
   }
 }
