@@ -10,10 +10,11 @@ class Fairy {
   believe() {
     this.dust += 10;
   }
-  // makeDresses(flowers) {
-  //   this.clothes.dresses.push(flowers);
-  //   return this.clothes.dresses.join("-");
-  // }
-}
+  makeDresses(flowers) {
+    // take each element from the argument array
+    // add it to the end of the clothes.dresses array at index 1
+    // 
+    }
+  }
 
 module.exports = Fairy;
