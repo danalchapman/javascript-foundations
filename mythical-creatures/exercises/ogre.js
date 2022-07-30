@@ -11,7 +11,6 @@ class Ogre {
     }
     swingAt(human) {
         this.swings += 1;
-        // ONLY swings when a human noticesOgre() === true
     }
 }
 

@@ -3,6 +3,7 @@ class Fairy {
     this.name = fairName;
     this.dust = 10;
     this.clothes = {dresses: ['Iris']};
+    this.disposition = "Good natured";
   }
   receiveBelief() {
     this.dust += 1;
@@ -10,11 +11,17 @@ class Fairy {
   believe() {
     this.dust += 10;
   }
-  makeDresses(flowers) {
-    // take each element from the argument array
-    // add it to the end of the clothes.dresses array at index 1
-    // 
+  makeDresses(flowers) { //Array
+    this.clothes.dresses.push(...flowers)
+  }
+  becomeProvoked() {
+    this.disposition = "Vengeful";
+  }
+  replaceInfant(infant) {
+    if (this.becomeProvoked()) {
+      infant.disposition = "Malicious";
     }
   }
+}
 
 module.exports = Fairy;
