@@ -11,9 +11,19 @@ class Human {
             carrots: 0
         };
     }
-    gatherMaterials(keyName, amount) { // passing in 2 arguments
-        if (this.materials === keyName) {
-            this.materials[keyName] + amount
+    gatherMaterials(materials, amount) { // passing in 2 arguments
+            this.materials[materials] += amount;
+    }
+    buildASnowman() {
+        var newSnowman = new Snowman(this.materials);
+        return newSnowman;
+    }
+    placeMagicHat() {
+        Snowman.canWearMagicHat;
+        if (Snowman.magicHat) {
+            return "I guess I didn't build it correctly."
+        } else {
+            return "Woah, this snowman is coming to life!";
         }
     }
 }
