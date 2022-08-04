@@ -7,22 +7,16 @@ class Direwolf {
     this.huntsWhiteWalkers = true;
   }
   protect(stark) {
-    if (this.starksToProtect.length > 1) {
-      return
-    }
-
-    if (this.home === stark.location) {
+    if (this.home === stark.location && this.starksToProtect.length < 2) {
       stark.safe = true;
-      this.starksToProtect.push(stark);
+      this.starksToProtect.push(stark)
       this.huntsWhiteWalkers = false;
     }
   }
-  leave(stark) {
+  leave (stark) {
+    stark.safe = false;
     for (var i = 0; i < this.starksToProtect.length; i++) {
-      if (this.starksToProtect[i].name === stark.name) {
-        stark.safe = false;
-        this.starksToProtect.splice(i, 1);
-      }
+      this.starksToProtect.splice(i, 1);
     }
   }
 }

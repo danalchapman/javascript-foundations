@@ -1,4 +1,4 @@
-const Direwolf = require("./direwolf");
+var Direwolf = require("./direwolf");
 
 class Stark {
   constructor(starkInfo) {
@@ -15,8 +15,8 @@ class Stark {
   callDirewolf(wolfName, wolfHome) {
     var direwolf = new Direwolf(wolfName, wolfHome);
     direwolf.home = this.location;
-    direwolf.protect(this)
-    return direwolf
+    direwolf.protect(this);
+    return direwolf;
   }
 }
 
